@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  MainListView.swift
 //  iOS_Playground
 //
 //  Created by Ikufumi Mitsuyu on 2026/06/14.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-public struct ContentView: View {
+public struct MainListView: View {
   public init() {}
   public var body: some View {
     VStack {
@@ -21,5 +21,5 @@ public struct ContentView: View {
 }
 
 #Preview {
-    ContentView()
+  MainListView()
 }

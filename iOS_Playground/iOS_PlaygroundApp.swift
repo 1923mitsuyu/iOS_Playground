@@ -12,7 +12,7 @@ import AppFeature
 struct iOS_PlaygroundApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+          MainListView()
         }
     }
 }

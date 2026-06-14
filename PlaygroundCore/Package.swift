@@ -1,8 +1,14 @@
 // swift-tools-version: 6.2
 // The swift-tools-version declares the minimum version of Swift required to build this package.
 
-import PackageDescription
+@preconcurrency import PackageDescription
 
+extension PackageDescription.Target.Dependency {}
+
+extension PackageDescription.Target.PluginUsage {
+  static let swiftLint: Self = .plugin(name: "SwiftLintBuildToolPlugin", package: "SwiftLintPlugins")
+}
+    
 let package = Package(
     name: "PlaygroundCore",
     // Development Target
@@ -11,9 +17,25 @@ let package = Package(
         .library(
             name: "AppFeature", targets: ["AppFeature"]),
     ],
+    dependencies: [
+      .package(url: "https://github.com/SimplyDanny/SwiftLintPlugins", exact: "0.63.3"),
+    ],
     targets: [
         .target(
-            name: "AppFeature"
+            name: "AppFeature",
+            path: "Sources/Features/AppFeature"
         ),
     ]
 )
+
+for target in package.targets {
+  // Feature共通の依存関係の追加
+//  if let path = target.path, path.hasSuffix("Sources/Features/") {
+//    target.dependencies += []
+//  }
+  // Pluginを設定
+  if target.type == .regular || target.type == .test {
+    target.plugins = target.plugins ?? []
+    target.plugins?.append(.swiftLint)
+  }
+}
