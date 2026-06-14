@@ -6,8 +6,13 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		216090932FDE658700047580 /* AppFeature in Frameworks */ = {isa = PBXBuildFile; productRef = 216090922FDE658700047580 /* AppFeature */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		213C5D342FDE5EF8008ED354 /* iOS_Playground.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOS_Playground.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		216090982FDE66FA00047580 /* PlaygroundCore */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = PlaygroundCore; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -23,6 +28,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				216090932FDE658700047580 /* AppFeature in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -33,7 +39,9 @@
 			isa = PBXGroup;
 			children = (
 				213C5D362FDE5EF8008ED354 /* iOS_Playground */,
+				2160908F2FDE654D00047580 /* Frameworks */,
 				213C5D352FDE5EF8008ED354 /* Products */,
+				216090982FDE66FA00047580 /* PlaygroundCore */,
 			);
 			sourceTree = "<group>";
 		};
@@ -43,6 +51,13 @@
 				213C5D342FDE5EF8008ED354 /* iOS_Playground.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		2160908F2FDE654D00047580 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -65,6 +80,7 @@
 			);
 			name = iOS_Playground;
 			packageProductDependencies = (
+				216090922FDE658700047580 /* AppFeature */,
 			);
 			productName = iOS_Playground;
 			productReference = 213C5D342FDE5EF8008ED354 /* iOS_Playground.app */;
@@ -249,8 +265,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -265,6 +282,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ikufumi.iOS-Playground";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
@@ -280,8 +298,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -296,6 +315,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ikufumi.iOS-Playground";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
@@ -328,6 +348,13 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		216090922FDE658700047580 /* AppFeature */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = AppFeature;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 213C5D2C2FDE5EF8008ED354 /* Project object */;
 }
