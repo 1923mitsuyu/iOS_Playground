@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-import AppFeature
+import Main
 
 @main
 struct iOS_PlaygroundApp: App {

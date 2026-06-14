@@ -15,15 +15,22 @@ let package = Package(
     platforms: [.iOS(.v18)],
     products: [
         .library(
-            name: "AppFeature", targets: ["AppFeature"]),
+            name: "Main", targets: ["Main"]),
     ],
     dependencies: [
       .package(url: "https://github.com/SimplyDanny/SwiftLintPlugins", exact: "0.63.3"),
     ],
     targets: [
         .target(
-            name: "AppFeature",
-            path: "Sources/Features/AppFeature"
+            name: "Main",
+            dependencies: [
+              "ExpandableScrollViewSample"
+            ],
+            path: "Sources/Samples/Main"
+        ),
+        .target(
+          name: "ExpandableScrollViewSample",
+          path: "Sources/Samples/ExpandableScrollViewSample"
         ),
     ]
 )

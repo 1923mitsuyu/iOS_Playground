@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		216090932FDE658700047580 /* AppFeature in Frameworks */ = {isa = PBXBuildFile; productRef = 216090922FDE658700047580 /* AppFeature */; };
+		214A5F2F2FDF0A7D00F41CBB /* Main in Frameworks */ = {isa = PBXBuildFile; productRef = 214A5F2E2FDF0A7D00F41CBB /* Main */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,7 +28,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				216090932FDE658700047580 /* AppFeature in Frameworks */,
+				214A5F2F2FDF0A7D00F41CBB /* Main in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,7 +80,7 @@
 			);
 			name = iOS_Playground;
 			packageProductDependencies = (
-				216090922FDE658700047580 /* AppFeature */,
+				214A5F2E2FDF0A7D00F41CBB /* Main */,
 			);
 			productName = iOS_Playground;
 			productReference = 213C5D342FDE5EF8008ED354 /* iOS_Playground.app */;
@@ -350,9 +350,9 @@
 /* End XCConfigurationList section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		216090922FDE658700047580 /* AppFeature */ = {
+		214A5F2E2FDF0A7D00F41CBB /* Main */ = {
 			isa = XCSwiftPackageProductDependency;
-			productName = AppFeature;
+			productName = Main;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
