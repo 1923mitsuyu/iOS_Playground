@@ -1,0 +1,134 @@
+included:
+  - Sources
+  - Tests
+
+opt_in_rules:
+  - array_init
+  - closure_end_indentation
+  - closure_spacing
+  - collection_alignment
+  - colon
+  - comma
+  - comma_inheritance
+  - contains_over_filter_count
+  - contains_over_filter_is_empty
+  - contains_over_first_not_nil
+  - contains_over_range_nil_comparison
+  - discouraged_object_literal
+  - duplicate_conditions
+  - duplicate_imports
+  - empty_collection_literal
+  - empty_count
+  - empty_string
+  - empty_xctest_method
+  - enum_case_associated_values_count
+  - explicit_init
+  - extension_access_modifier
+  - fallthrough
+  - fatal_error_message
+  - file_name
+  - first_where
+  - flatmap_over_map_reduce
+  - identical_operands
+  - invalid_swiftlint_command
+  - joined_default_parameter
+  - last_where
+  - legacy_multiple
+  - legacy_random
+  - literal_expression_end_indentation
+  - lower_acl_than_parent
+  - nslocalizedstring_key
+  - object_literal
+  - overridden_super_call
+  - override_in_extension
+  - pattern_matching_keywords
+  - prefer_self_type_over_type_of_self
+  - prefer_zero_over_explicit_init
+  - prohibited_super_call
+  - reduce_into
+  - redundant_nil_coalescing
+  - redundant_type_annotation
+  - single_test_class
+  - sorted_first_last
+  - sorted_imports
+  - static_operator
+  - test_case_accessibility
+  - toggle_bool
+  - unavailable_condition
+  - unavailable_function
+  - unneeded_parentheses_in_closure_argument
+  - unowned_variable_capture
+  - untyped_error_in_catch
+  - vertical_parameter_alignment_on_call
+  - vertical_whitespace_closing_braces
+  - vertical_whitespace_opening_braces
+  - void_function_in_ternary
+  - weak_delegate
+  - xct_specific_matcher
+  - yoda_condition
+
+disabled_rules:
+  - attributes
+  - nesting
+  - function_parameter_count
+  - cyclomatic_complexity
+  - large_tuple
+  - trailing_comma
+  - operator_usage_whitespace
+
+overridden_super_call:
+  included:
+    - '*'
+    - configureComponent()
+    - initComponentView()
+    - updateText(_:)
+
+custom_rules:
+  do_not_use_print:
+    name: "DO NOT use print"
+    regex: "(print)"
+    match_kinds:
+      - identifier
+    message: "print を使用しないでください。 Logger を使用しましょう。"
+    severity: warning
+  required_case_let:
+    name: "A case with Result should be written case let .hoge(fuga):"
+    regex: "^\\s+case\\s\\.\\w*\\(let"
+    message: "引数があるcaseはcase let .hoge(fuga):の書き方をしましょう。"
+    severity: warning
+  safari_view_controller_direct_url:
+    regex: "SFSafariViewController\\(url:"
+    message: "SFSafariViewController(memberIDAttachedURL:) を使用してください"
+    severity: error
+
+identifier_name:
+  excluded:
+    - id
+    - i
+    - ok
+    - x
+    - y
+    - rx
+    - _domain
+    - _code
+
+line_length: 150
+
+type_body_length:
+  - 300
+  - 400
+
+file_length:
+  warning: 500
+  error: 1000
+
+function_body_length:
+  warning: 100
+  error: 200
+
+type_name:
+  validate_protocols: false
+  excluded:
+    - ID
+  max_length:
+    warning: 60
