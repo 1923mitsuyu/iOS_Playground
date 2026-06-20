@@ -3,7 +3,9 @@
 
 @preconcurrency import PackageDescription
 
-extension PackageDescription.Target.Dependency {}
+extension PackageDescription.Target.Dependency {
+  static let tca: Self = .product(name: "ComposableArchitecture", package: "swift-composable-architecture")
+}
 
 extension PackageDescription.Target.PluginUsage {
   static let swiftLint: Self = .plugin(name: "SwiftLintBuildToolPlugin", package: "SwiftLintPlugins")
@@ -19,15 +21,17 @@ let package = Package(
     ],
     dependencies: [
       .package(url: "https://github.com/SimplyDanny/SwiftLintPlugins", exact: "0.63.3"),
+      .package(url: "https://github.com/pointfreeco/swift-composable-architecture", exact: "1.26.0"),
     ],
     targets: [
         .target(
-            name: "Main",
-            dependencies: [
-              "ExpandableScrollViewSample",
-              "DynamicFontSizeViewSample"
-            ],
-            path: "Sources/Samples/Main"
+          name: "Main",
+          dependencies: [
+            "ExpandableScrollViewSample",
+            "DynamicFontSizeViewSample",
+            "Map",
+          ],
+          path: "Sources/Samples/Main"
         ),
         .target(
           name: "ExpandableScrollViewSample",
@@ -37,6 +41,13 @@ let package = Package(
           name: "DynamicFontSizeViewSample",
           path: "Sources/Samples/DynamicFontSizeViewSample"
         ),
+        .target(
+          name: "Map",
+          dependencies: [
+            .tca
+          ],
+          path: "Sources/Samples/Map"
+        )
     ]
 )
 
