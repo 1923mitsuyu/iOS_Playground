@@ -10,5 +10,6 @@ import Foundation
 enum Destinations {
   enum Main: String, CaseIterable, Hashable {
     case expandableScrollView = "Expandable ScrollView"
+    case dynamicFontSizeChangeView = "Dynamic Font Size Change View"
   }
 }

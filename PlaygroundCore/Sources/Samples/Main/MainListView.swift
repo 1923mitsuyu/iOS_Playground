@@ -5,8 +5,8 @@
 //  Created by Ikufumi Mitsuyu on 2026/06/14.
 //
 
-import ExpandableScrollViewSample
 import DynamicFontSizeViewSample
+import ExpandableScrollViewSample
 import SwiftUI
 
 public struct MainListView: View {
@@ -34,6 +34,8 @@ public struct MainListView: View {
         switch destination {
         case .expandableScrollView:
           ExpandableScrollView()
+        case .dynamicFontSizeChangeView:
+          DynamicFontSizeView()
         }
       }
     }
