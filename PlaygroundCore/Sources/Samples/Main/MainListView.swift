@@ -6,6 +6,7 @@
 //
 
 import ExpandableScrollViewSample
+import DynamicFontSizeViewSample
 import SwiftUI
 
 public struct MainListView: View {

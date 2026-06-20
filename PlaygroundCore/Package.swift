@@ -24,13 +24,18 @@ let package = Package(
         .target(
             name: "Main",
             dependencies: [
-              "ExpandableScrollViewSample"
+              "ExpandableScrollViewSample",
+              "DynamicFontSizeViewSample"
             ],
             path: "Sources/Samples/Main"
         ),
         .target(
           name: "ExpandableScrollViewSample",
           path: "Sources/Samples/ExpandableScrollViewSample"
+        ),
+        .target(
+          name: "DynamicFontSizeViewSample",
+          path: "Sources/Samples/DynamicFontSizeViewSample"
         ),
     ]
 )
