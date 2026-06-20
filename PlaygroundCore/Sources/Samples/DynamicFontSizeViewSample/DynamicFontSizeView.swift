@@ -37,7 +37,6 @@ package struct DynamicFontSizeView: View {
       /// nonisolated public func buttonStyle<S>(_ style: S) -> some View where S : ButtonStyle
       .buttonStyle(BlueRoundedButtonStyle())
     }
-    .background(.red)
     .ignoresSafeArea()
   }
 }
