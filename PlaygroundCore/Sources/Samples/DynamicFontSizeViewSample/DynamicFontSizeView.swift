@@ -14,6 +14,7 @@ package struct DynamicFontSizeView: View {
   // MARK: - Initialize
   package init() {}
   // MARK: - Body
+  /// @ViewBuilder @MainActor @preconcurrency var body: Self.Body { get }
   package var body: some View {
     /// @inlinable public init(alignment: HorizontalAlignment = .center, spacing: CGFloat? = nil, @ViewBuilder content: () -> Content)
     VStack(spacing: 0) {
